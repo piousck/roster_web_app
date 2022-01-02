@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class MyHomePage
+    extends StatelessWidget {
+  const MyHomePage({Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,13 +13,15 @@ class MyHomePage extends StatelessWidget {
           children: [
             Container(
               color: Colors.redAccent,
-              constraints: const BoxConstraints(maxWidth: 100, minWidth: 100),
+              constraints:
+                  const BoxConstraints(
+                      maxWidth: 85,
+                      minWidth: 85),
             ),
             Expanded(
               flex: 1,
               child: Container(
                 color: Colors.amber,
-                width: 1200,
               ),
             ),
           ],
@@ -28,7 +32,7 @@ class MyHomePage extends StatelessWidget {
           child: Container(
             color: Colors.green,
             width: 180,
-            height: 720,
+            height: 620,
           ),
         ),
       ],
