@@ -1,41 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:roster_web_app/widgettest/second_test_wid.dart';
+import 'package:roster_web_app/widgettest/widget_test.dart';
 
-class MyHomePage
-    extends StatelessWidget {
-  const MyHomePage({Key? key})
-      : super(key: key);
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Row(
       children: [
-        Row(
-          children: [
-            Container(
-              color: Colors.redAccent,
-              constraints:
-                  const BoxConstraints(
-                      maxWidth: 85,
-                      minWidth: 85),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: Colors.amber,
-              ),
-            ),
-          ],
+        Container(
+          color: Colors.redAccent,
+          constraints: const BoxConstraints(maxWidth: 180, minWidth: 80),
         ),
-        Positioned(
-          left: 0,
-          top: 90,
+        Expanded(
+          flex: 1,
+          child: Container(),
+        ),
+        Expanded(
+          flex: 10,
           child: Container(
-            color: Colors.green,
-            width: 180,
-            height: 620,
+            child: mainWindowBox(),
           ),
         ),
+        Expanded(
+          flex: 2,
+          child: Container(),
+        ),
       ],
+    );
+  }
+
+  Container mainWindowBox() {
+    return Container(
+      constraints: BoxConstraints.loose(Size(150, 650)),
+      child: MySecondTestWidget(),
     );
   }
 }

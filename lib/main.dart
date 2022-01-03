@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:roster_web_app/pages/home_page.dart';
-import 'package:roster_web_app/widgettest/widget_test.dart';
+import 'package:roster_web_app/layouts/main_layout.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key})
-      : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -18,6 +16,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MyHomePage());
+        home: const MainLayout());
   }
 }
